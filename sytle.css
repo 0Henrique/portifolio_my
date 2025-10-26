@@ -55,7 +55,8 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(/img/img_pf.png) no-repeat;
+    background: url('img/img_pf.png') no-repeat;
+
     background-size: cover;
     background-position: center;
     display: flex;
@@ -117,7 +118,8 @@ body {
     margin: 30px 15px 30px 0;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(2s * var());
+    animation-delay: calc(.2s * var(--i));
+
 }
 
 .home-sci a:hover {
@@ -147,6 +149,281 @@ body {
     box-shadow: 0 0 50px cyan,
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan
+}
+.about{
+    background-image: url(img/img_about.png);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 0px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.services-list{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    padding: 10px;
+}
+.container{
+    padding: 90px;
+    background-color: #000619;
+}
+.container img{
+    width: 100vw;
+    height: auto;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+    1px 1px 40px #0053b8f7;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.read:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+.sec-skills {
+    background-color: #000619;
+    width: 100vw;
+    min-height: 100vh;
+    color: #fff;
+    padding: 75px 90px;
+
+}
+
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s ease forwards;
+}
+
+/* Linha de fundo */
+.Technical-bars .bar .progress-line {
+    position: relative;
+    height: 6px;
+    width: 100%;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Linha animada (a barrinha azul) */
+.Technical-bars .bar .progress-line span {
+    position: absolute;
+    height: 100%;
+    background: #0ef;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: growBar 1.5s ease forwards;
+}
+
+/* Porcentagens */
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.javascript span { width: 85%; }
+.progress-line.python span { width: 50%; }
+.progress-line.react span { width: 75%; }
+
+/* Bolha de porcentagem */
+.progress-line span::after {
+    position: absolute;
+    content: attr(data-percent);
+    right: 0;
+    top: -28px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    animation: showText 0.5s 1.5s ease forwards;
+}
+
+/* Setinha da bolha */
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: -10px;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText 0.5s 1.5s ease forwards;
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bars{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bars svg{
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bars .progress-bar{
+    stroke-width: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ANIMAÇÕES --- */
+@keyframes growBar {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+@keyframes showText {
+    to { opacity: 1; }
 }
 
 @keyframes slideRight {
@@ -196,41 +473,4 @@ body {
         opacity: 1;
     }
 }
-.about{
-    background-image: url(img/img_about.png);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 1.5rem;
-}
-.about-img img{
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 0px;
-}
-.about-text h2{
-    font-size: 60px;
-}
-.about-text h2 span{
-    color: #0ef;
-}
-.about-text h4{
-    font-size: 29px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.7;
-    margin: 15px 0 30px;
-}
-.about-text p{
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-
-
-
-
 
