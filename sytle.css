@@ -15,7 +15,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10px;
-    background: #051129;
+    background: ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,95 +150,114 @@ body {
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan
 }
-.about{
+
+.about {
     background-image: url(img/img_about.png);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    height: 80vh;
 }
-.about-img img{
-    padding-bottom: 20%;
-    max-width: 630px;
+
+.about-img img {
+    padding-bottom: -20%;
+    max-width: 700px;
     height: auto;
     width: 100%;
     border-radius: 0px;
 }
-.about-text h2{
+
+.about-text h2 {
     font-size: 60px;
 }
-.about-text h2 span{
+
+.about-text h2 span {
     color: #0ef;
 }
-.about-text h4{
-    font-size: 29px;
+
+.about-text h4 {
+    font-size: 35px;
     font-weight: 600;
     color: #fff;
     line-height: 1.7;
     margin: 15px 0 30px;
 }
-.about-text p{
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    padding-right: 15%;
+}
+
+.services-list {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.services-list{
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-.sub-title{
+
+.sec-skills h1 {
     text-align: center;
     font-size: 60px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
 }
-.sub-title span{
-    padding: 10px;
+
+.sec-skills h1 span {
+    color: #0ef;
 }
-.container{
+
+.container {
     padding: 90px;
-    background-color: #000619;
+    background-color: ;
 }
-.container img{
+
+.container img {
     width: 100vw;
     height: auto;
 }
-.services-list{
+
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
     background-color: transparent;
-    padding: 40px;
+    padding: 35px;
     font-size: 13px;
     font-weight: 13px;
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #012290f7,
-    1px 1px 40px #0053b8f7;
+        1px 1px 40px #0053b8f7;
 }
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+
+.services-list div i {
+    font-size: 35px;
+    margin-bottom: 20px;
 }
-.services-list div h2{
-    font-size: 30px;
+
+.services-list div h2 {
+    font-size: 27px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
+
+.services-list div a {
     text-decoration: none;
     color: #000000;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
-.read{
+
+.read {
     display: inline-block;
     padding: 12px 28px;
     background: #0ef;
@@ -252,18 +271,21 @@ body {
     animation: slideLeft 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef;
+        0 0 25px #0ef;
 }
-.read:hover{
+
+.read:hover {
     box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
 }
-.services-list div:hover{
+
+.services-list div:hover {
     transform: translateY(-10px);
 }
+
 .sec-skills {
-    background-color: #000619;
+    background-color: #000215;
     width: 100vw;
     min-height: 100vh;
     color: #fff;
@@ -271,24 +293,36 @@ body {
 
 }
 
-.container1{
+.container1 {
     width: 600px;
     height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
+    padding: 75px 20px;
+    margin-left: 20px;
 }
-.heading1{
+
+.heading1 {
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
 }
-.bar{
-    font-size: 23px;
+
+.bar {
+    font-size: 20px;
 }
+
+/* Corrigido o espaçamento */
 .Technical-bars .bar {
-    margin-top: 40px 0;
+    margin: 17px 0;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
 }
 
 .Technical-bars .bar .info {
@@ -305,42 +339,57 @@ body {
 /* Linha de fundo */
 .Technical-bars .bar .progress-line {
     position: relative;
-    height: 6px;
-    width: 100%;
-    background: #111;
     border-radius: 10px;
-    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: growBar 1s ease forwards;
 }
 
 /* Linha animada (a barrinha azul) */
 .Technical-bars .bar .progress-line span {
-    position: absolute;
     height: 100%;
-    background: #0ef;
+    background-color: #0ef;
+    position: absolute;
     border-radius: 10px;
     transform: scaleX(0);
     transform-origin: left;
-    animation: growBar 1.5s ease forwards;
+    animation: growBar 1s 0.5s ease forwards;
 }
 
-/* Porcentagens */
-.progress-line.html span { width: 90%; }
-.progress-line.css span { width: 60%; }
-.progress-line.javascript span { width: 85%; }
-.progress-line.python span { width: 50%; }
-.progress-line.react span { width: 75%; }
+/* Definindo larguras (percentuais reais) */
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 60%;
+}
+
+.progress-line.javascript span {
+    width: 85%;
+}
+
+.progress-line.python span {
+    width: 50%;
+}
+
+.progress-line.react span {
+    width: 88%;
+}
 
 /* Bolha de porcentagem */
 .progress-line span::after {
     position: absolute;
     content: attr(data-percent);
-    right: 0;
-    top: -28px;
-    background: #000;
+    padding: 1px 8px;
+    background-color: #000;
     color: #fff;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: 3px;
+    top: -28px;
+    right: 0;
     opacity: 0;
     animation: showText 0.5s 1.5s ease forwards;
 }
@@ -349,44 +398,206 @@ body {
 .progress-line span::before {
     content: "";
     position: absolute;
-    right: 8px;
-    top: -10px;
-    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
     border-top-color: #000;
+    top: -10px;
+    right: 0;
     opacity: 0;
     animation: showText 0.5s 1.5s ease forwards;
 }
-.radial-bars{
+
+/* Radiais */
+.radial-bars {
     width: 100%;
     display: flex;
-    height: 170px;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 40%;
+    margin-bottom: 20px;
     position: relative;
 }
-.radial-bars .radial-bars{
-    width: 50%;
-    height: 170px;
-    margin-bottom: 10px;
+
+.radial-bars .radial-bar svg {
     position: relative;
-}
-.radial-bars .radial-bars svg{
-    position: relative;
+    left: 45%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
+    width: 110px;
     height: 160px;
 }
-.radial-bars .radial-bars .progress-bar{
+
+.radial-bars .progress-bar {
     stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 0;
 }
 
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
 
+/* Animações de cada círculo */
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
 
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
 
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
 
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
 
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
 
+/* 90% */
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
 
+/* 65% */
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 57;
+    }
+}
+
+/* 88% */
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 60;
+    }
+}
+
+/* 85% */
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1.5s ease forwards;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 55%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1.5s ease forwards;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* iguala a altura das colunas */
+    gap: 60px;
+    margin-top: 60px;
+    padding: 0 5%;
+}
+
+/* Cada lado ocupa metade da largura */
+.skills-container .container1 {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* Lado esquerdo */
+.technical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Lado direito */
+.professional {
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título bonito */
+.professional .heading1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration: none;
+}
+
+/* Grade dos círculos */
+.professional .radial-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 50px;
+    justify-items: center;
+}
+
+/* Corrige tamanhos dos círculos */
+.radial-bars .radial-bar {
+    width: 150px;
+    height: 150px;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 992px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .skills-container .container1 {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .professional .radial-bars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .professional .radial-bars {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
@@ -418,12 +629,19 @@ body {
 
 /* --- ANIMAÇÕES --- */
 @keyframes growBar {
-    0% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 @keyframes showText {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideRight {
@@ -473,4 +691,3 @@ body {
         opacity: 1;
     }
 }
-

@@ -1,12 +1,13 @@
 var typed = new Typed(".text", {
     strings: [
-        "Administração de servidores",
-        "Ambientes VMware e Hyper-V",
-        "Backup e replicação com Veeam",
-        "Automação com PowerShell",
-        "Gestão de Microsoft 365 e AD",
-        "Monitoramento com Zabbix",
-        "Segurança e conformidade TISAX"
+        "Administração de servidores Windows e Linux",
+        "Ambientes virtualizados VMware e Hyper-V",
+        "Backup e replicação de dados com Veeam",
+        "Automação de rotinas com PowerShell",
+        "Gestão de Microsoft 365 e Active Directory",
+        "Monitoramento e dashboards com Zabbix",
+        "Segurança da informação e conformidade TISAX",
+        "Integração de sistemas e soluções corporativas"
     ],
     typeSpeed: 20,
     backSpeed: 25,
